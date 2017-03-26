@@ -1,4 +1,273 @@
 /*Subreddit theme done by Niko | Be free to use any of this code for use in your own subreddits*/
+/* modified and updateed by /u/zoid25 */
+
+/* ****************************************************
+ * MAIN
+ *************************************************** */
+
+body {
+  overflow-x: hidden;
+  background-color: #eee;
+  min-width: 820px;
+}
+
+.titlebox,
+.body {
+  color: #3a3a3a;
+}
+
+body:before {
+  height: 130px;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: #3a3d4d;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  content: "";
+  text-indent: -9999px;
+  z-index: -1;
+}
+
+/* ****************************************************
+ * HEADER
+ *************************************************** */
+
+ #header {
+   margin: 0;
+   height: 0;
+   border: none;
+ }
+
+ #header-img.default-header,
+ #header-img {
+   display: none;
+ }
+
+ #header .pagename a {
+   z-index: 99;
+   width: 0;
+   padding-left: 256px;
+   height: 48px;
+   background-image: url(%%raid-logo%%);
+   background-size: 256px 48px;
+   background-position: 0;
+   position: absolute;
+   font-size: 0;
+   top: 0;
+   margin: 0;
+   text-decoration: none;
+ }
+
+ #sr-header-area {
+   background-color: rgba(0, 0, 0, 0.2);
+   border: 0 solid;
+   transition: all .15s ease;
+   height: 24px;
+   line-height: 23px;
+ }
+
+ #sr-header-area .width-clip {
+   right: 300px;
+ }
+
+ body:not(.loggedin) #sr-header-area .width-clip {
+   right: 340px;
+ }
+
+ #sr-header-area .sr-list {
+   margin-right: 48px;
+ }
+
+ #sr-header-area .sr-bar a,
+ #sr-more-link,
+ #sr-header-area .separator,
+ #sr-header-area .dropdown.srdrop .selected {
+   background-color: transparent;
+   color: rgba(255, 255, 255, 0.6);
+   transition: all .15s ease;
+ }
+
+ #sr-header-area:hover .sr-bar a,
+ #sr-header-area:hover #sr-more-link,
+ #sr-header-area:hover .seperator,
+ #sr-header-area:hover .dropdown.srdrop .selected {
+   color: rgba(255, 255, 255, 1);
+ }
+
+ #sr-header-area .sr-bar a:hover,
+ #sr-more-link:hover,
+ #sr-header-area .dropdown.srdrop .selected:hover {
+   background-color: transparent;
+   border: 0 solid;
+   transition: all .15s ease;
+ }
+
+ a.random.choice {
+   padding-top: 2px;
+   position: relative;
+   display: inline-block;
+   margin-top: -2px;
+ }
+
+ #sr-header-area .dropdown.srdrop .selected {
+   margin: 0 12px 0 8px;
+   padding: 0;
+   background-image: none;
+ }
+
+ #sr-header-area .dropdown.srdrop .selected:hover {
+   text-decoration: underline;
+ }
+
+ #sr-header-area .dropdown.srdrop .selected:after {
+   position: relative;
+   content: "▼";
+   margin-left: 4px;
+   font-size: 10px;
+ }
+
+ #sr-header-area .drop-choices.srdrop {
+   background-color: #fff;
+   border: none;
+   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+ }
+
+ #sr-header-area .drop-choices a.choice {
+   border-bottom: 1px solid #edeeee;
+   color: #4d5763;
+   padding: 2px;
+ }
+
+ #sr-header-area .drop-choices a.choice:hover {
+   background-color: #f1f1f1;
+ }
+
+ #header-bottom-right {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: auto;
+   max-width: 300px;
+   height: 24px;
+   background-color: transparent;
+   font-size: 11px;
+   color: rgba(255, 255, 255, 0.45);
+   padding: 5px 8px 4px 2px;
+ }
+
+ body:not(.loggedin) #header-bottom-right {
+   max-width: 340px;
+ }
+
+ #header-bottom-right a {
+   color: #fff;
+ }
+
+ #header-bottom-right a:hover {
+   text-decoration: underline;
+ }
+
+ #header-bottom-right a.pref-lang,
+ .loggedin .logout a {
+   background-position: -0 -16px;
+   /*background-image: url(%%spritesheet%%);*/
+   width: 16px;
+   height: 14px;
+   display: inline-block;
+   text-indent: -9999px;
+   margin: 0;
+   position: relative;
+   top: -1px;
+   transition: all .25s ease;
+ }
+
+ #header-bottom-left {
+   position: absolute;
+   top: 36px;
+   left: 16px;
+ }
+
+ #header .tabmenu {
+   border: none;
+   margin: 0 0 0 250px;
+ }
+
+ #header .tabmenu ul li {
+   margin: 0 !important;
+ }
+
+ #header .tabmenu li a {
+   display: inline-block;
+   margin: 0 7px;
+   padding: 16px;
+   background-color: transparent;
+   border: 0;
+   border-radius: 0;
+   color: rgba(255, 255, 255, 0.6);
+   text-transform: uppercase;
+   font-weight: 400;
+   font-size: 14px;
+   font-family: Arial, sans-serif;
+   transition: color .25s ease, background-color .25s ease;
+   color: #fff;
+ }
+
+ #header .tabmenu li a,
+ .pagename a {
+   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+ }
+
+ #header .tabmenu li a:hover {
+   color: rgba(255, 255, 255, 1);
+   background-color: rgba(0, 0, 0, 0.08);
+ }
+
+ #header .tabmenu li.selected a {
+   padding: 16px 16px 14px;
+   background-color: transparent;
+   border: 0;
+   border-bottom: 2px solid #fff;
+   color: rgba(255, 255, 255, 1);
+   font-weight: 700;
+ }
+
+ #header .tabmenu li.selected a:hover {
+   background-color: rgba(0, 0, 0, 0.08);
+ }
+
+/* ************************************************* */
+
+/* ****************************************************
+ * SIDE
+ *************************************************** */
+
+ .side {
+   margin: 81px 16px 0 0;
+   padding: 6px 16px;
+   border-radius: 2px;
+   background-color: transparent;
+ }
+
+ .side:after {
+   display: block;
+   margin: 10px 0;
+   padding: 10px 0;
+   color: #5b92fa;
+   content: "";
+   text-transform: none;
+   font-size: 16px;
+   font-family: arial, sans-serif;
+   position: absolute;
+   width: 300px;
+   text-align: center;
+   right: 16px;
+ }
+
+/* ************************************************* */
+
 
 /*Changes users online*/
 div.titlebox span.word {
@@ -25,13 +294,6 @@ div.titlebox .users-online span.number:after {
 
 body.post-under-6h-old .gilded-icon {
   opacity: 1;
-}
-
-body {
-  background-color: #f3f3f3;
-  font-family: sans-serif;
-  line-height: 1.4;
-  color: #1c1c1c;
 }
 
 ---
@@ -95,19 +357,6 @@ a:focus {
   font-size: 13px;
 }
 
-.side {
-  padding: 10px;
-  margin: 0;
-  margin-left: 10px;
-  background-color: #e9e9e9;
-  top: 160px !important;
-  padding-top: 42px;
-  border-left: 8px solid #c9cfd0;
-}
-
-.side .md h6 {
-  text-decoration: none;
-}
 
 .sidebox.submit,
 .sidebox.create {
@@ -115,13 +364,7 @@ a:focus {
   padding: 0 !important;
 }
 
-.side .spacer {
-  margin: 0 0 10px;
-}
 
-.side .usertext {
-  padding-top: 10px;
-}
 
 .users-online::before {
   background: #2c6;
@@ -131,48 +374,10 @@ a:focus {
   margin-top: 4px;
 }
 
-.side .morelink {
-  border: none;
-}
 
-.side .morelink .nub {
-  display: none;
-}
 
 .sidebox.submit-link .morelink {
   display: none;
-}
-
-.side .submit-text .morelink {
-  background-color: transparent;
-  background-image: url(%%Submit3A%%);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  height: 44px;
-  display: block;
-  padding: 0;
-  margin: 0;
-  font-size: 0;
-  margin-left: 5px;
-  background-size: 290px;
-  transition: .13s;
-}
-
-.side .submit-text .morelink:hover {
-  background-image: url(%%Submit3B%%);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  display: block;
-  padding: 0;
-  margin: 0;
-  font-size: 0;
-  background-size: 298px;
-  margin-top: 2px;
-  margin-left: 2px;
-}
-
-.side .md strong {
-  font-weight: bolder;
 }
 
 #search input[type="text"] {
@@ -479,11 +684,6 @@ hr {
   color: #666;
 }
 
-.titlebox,
-.body {
-  color: #3a3a3a;
-}
-
 form #search {
   z-index: 100;
 }
@@ -597,11 +797,6 @@ form #search {
 ul.tabmenu.formtab {
   display: block;
   margin-top: -79px;
-}
-
-.link:hover {
-  background: rgba(238, 238, 238, 0.79);
-  transition: .2s;
 }
 
 #userbarToggle {
